@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
 script:
-  - npm run lint
-  - npm test
-  - npm run build
+- npm run lint
+- npm test
+- npm run build
+deploy:
+  provider: heroku
+  app: jesper-build-and-deploy
+  skip_cleanup: true
+  api_key:
+    secure: LyisHrrUs90j44XBeUe4zp34mMAlFwh2B4Vw5uuNbC67rXUd16xASmc/FG1JI4IOIMIptWP9+7rzoWjbpNmxoC1eHTkLW3kT9FZ2BqH5lUHzBuPlximL649c11NX8GfJS3q2sdM7vPQ094ADdvxr3+N8lJTSVK0SmA4On/9VzMtc/f9Pv6YirEIuyzSLxCgfj8RrTJ0EeOSQX60RSB+hcWvMGtXD2wgja7CD4GU+WQkbdFtE8zIMofFqjXChxCvRCkn7MlypJBE+RbTlIuLwIEUW39kYvNbEZ5QIk0v2yFIBS+QjuAn7LdqNCEGwt9VTXxQewW6VYlomq1Q3BNg44bAtl1IL0Z02SrN2IRKQPh+NGV8W1GZowT03w+Dig6e+Wf2UW5LNoi+ZqFYHt0LxhdjuRJPV+ii5OcS2dT2Ga95yABsdcq6TCt8lhLW7QKckTvXL5fDMWfPFjQTG790ODudNXWlBgIFPcyp2j9Ixoh3g0/0SZs07VbOU6KUTvpXB1eeg7bqN6yaAEKxOliXzugnb4HtcLMs/iFQpNhD7zccJjHD5oSGExM6HDkA3rdH9uMQ1VxxMKtWhsuSqKnbkIJchK8q0sgiwB+DZnB28ngGp1zDWcLxH/7KCwzO4fyKfFsnIhnowyzyyD7dLfmzVvgg3lYTF8e54u+XFlAwv7F0=
