@@ -26,7 +26,7 @@ const PosterCard = ({ classes, posterUrl, movieDetails }) => (
         <Typography component="p">{movieDetails.overview}</Typography>
       </CardContent>
       <CardActions>
-      <Button color="primary" className={classes.button} href={'https://www.themoviedb.org/movie/${movieDetails.id}'}>
+        <Button color="primary" className={classes.button} href={'https://www.themoviedb.org/movie/'.concat(movieDetails.id)}>
         Read more
       </Button>
       </CardActions>
